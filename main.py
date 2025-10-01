@@ -404,3 +404,5 @@ class Leaderboard(customtkinter.CTk):
 if __name__ == "__main__":
     app = Leaderboard("Lacaze Test")
     app.mainloop() 
+
+#test
