@@ -1,7 +1,17 @@
 import json
+import os
 import random
 
 ########## Database ##########
+
+def create_db():
+    blank_structure = {
+        "tournaments": []
+    }
+
+    if not os.path.exists("db.json"):
+        with open("db.json", "w", encoding="utf-8") as f:
+            json.dump(blank_structure, f, indent=4, ensure_ascii=False)
 
 def return_tournaments_list():
     with open("db.json", "r") as file:
