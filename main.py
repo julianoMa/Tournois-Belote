@@ -71,6 +71,8 @@ class MenuTournois(customtkinter.CTk):
         self.title = customtkinter.CTkLabel(self, text="Tournois Belotte - Liste des tournois", font=("Arial", 20))
         self.title.grid(row=0, column=0, padx=20, pady=20, sticky="ew", columnspan=2)
 
+        create_db()
+        
         self.tournaments_list = return_tournaments_list() 
 
         self.build_ui()
@@ -402,5 +404,5 @@ class Leaderboard(customtkinter.CTk):
          
 
 if __name__ == "__main__":
-    app = Leaderboard("Lacaze Test")
+    app = MenuTournois()
     app.mainloop() 
